@@ -128,8 +128,8 @@ class App extends Component {
             }
             />
 
-            <MultiDataList componentId = "language-list"
-            dataField = "original_language.raw"
+            <MultiDataList componentId="educationalSectorsFilter"
+            dataField = "educational_sectors"
             className = "language-filter"
             title = "language"
             size = {
@@ -158,20 +158,6 @@ class App extends Component {
                 }
             }
             data={this.state.educationalSectorsData}
-            /*data={[
-    {
-      label: "English",
-      value: "English"
-    },
-    {
-      label: "Chinese",
-      value: "Chinese"
-    },
-    {
-      label: "Hindi",
-      value: "Hindi"
-    }
-  ]}*/
             showFilter = {
                 true
             }
@@ -193,17 +179,19 @@ class App extends Component {
                     backgroundColor: '#fafafa'
                 }
             } >
-<ReactiveList componentId = "SearchResult"
+
+            
+            <ReactiveList componentId="SearchResult"
             dataField = "title"
             size = {
                 3
             }
             className = "result-list-container"
-            pagination URLParams react = {
-                {
-                    and: 'BookSensor',
-                }
-            }
+            pagination URLParams
+            // add all filters here
+            react={{
+                "and": ["educationalSectorsFilter"]
+            }}
             render = {
                 ({
                     data
