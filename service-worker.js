@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/oerhoernchen20-react/precache-manifest.655db5907ff11e5fc033ba03b069b57a.js"
+  "/oerhoernchen20-react/precache-manifest.aed24b6921d2d11e1df0acef11403e48.js"
 );
 
 self.addEventListener('message', (event) => {

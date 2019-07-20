@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/oerhoernchen20-react/static/css/main.d6ae08f7.chunk.css",
-    "main.js": "/oerhoernchen20-react/static/js/main.3afcdc74.chunk.js",
-    "main.js.map": "/oerhoernchen20-react/static/js/main.3afcdc74.chunk.js.map",
+    "main.js": "/oerhoernchen20-react/static/js/main.53bf9aa5.chunk.js",
+    "main.js.map": "/oerhoernchen20-react/static/js/main.53bf9aa5.chunk.js.map",
     "runtime~main.js": "/oerhoernchen20-react/static/js/runtime~main.c7278af3.js",
     "runtime~main.js.map": "/oerhoernchen20-react/static/js/runtime~main.c7278af3.js.map",
     "static/js/2.1223d7f9.chunk.js": "/oerhoernchen20-react/static/js/2.1223d7f9.chunk.js",
     "static/js/2.1223d7f9.chunk.js.map": "/oerhoernchen20-react/static/js/2.1223d7f9.chunk.js.map",
     "index.html": "/oerhoernchen20-react/index.html",
-    "precache-manifest.655db5907ff11e5fc033ba03b069b57a.js": "/oerhoernchen20-react/precache-manifest.655db5907ff11e5fc033ba03b069b57a.js",
+    "precache-manifest.aed24b6921d2d11e1df0acef11403e48.js": "/oerhoernchen20-react/precache-manifest.aed24b6921d2d11e1df0acef11403e48.js",
     "service-worker.js": "/oerhoernchen20-react/service-worker.js",
     "static/css/main.d6ae08f7.chunk.css.map": "/oerhoernchen20-react/static/css/main.d6ae08f7.chunk.css.map"
   }

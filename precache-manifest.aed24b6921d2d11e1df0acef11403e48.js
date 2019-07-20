@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bc9dfc02f30a8984d98f9f5e18d5775a",
+    "revision": "b5a26ce4dd306af0e270a244d720dcfa",
     "url": "/oerhoernchen20-react/index.html"
   },
   {
-    "revision": "c96123359963ff815a14",
+    "revision": "6f4c6c6a4b9fb0dd6b2c",
     "url": "/oerhoernchen20-react/static/css/main.d6ae08f7.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oerhoernchen20-react/static/js/2.1223d7f9.chunk.js"
   },
   {
-    "revision": "c96123359963ff815a14",
-    "url": "/oerhoernchen20-react/static/js/main.3afcdc74.chunk.js"
+    "revision": "6f4c6c6a4b9fb0dd6b2c",
+    "url": "/oerhoernchen20-react/static/js/main.53bf9aa5.chunk.js"
   },
   {
     "revision": "9ce2e1f298fa5c25190e",
