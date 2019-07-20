@@ -83,13 +83,13 @@
         "label": "Frühkindliche Erziehung",
         "value": "earlychildhood"
     }, {
-        "label": "Grundschulbildung",
+        "label": "Grundschulbildung (1-4)",
         "value": "primaryschool"
     }, {
-        "label": "Sekundarstufe 1",
+        "label": "Sekundarstufe 1 (5-10)",
         "value": "secondaryschool1"
     }, {
-        "label": "Sekundarstufe 2",
+        "label": "Sekundarstufe 2 (11-13)",
         "value": "secondaryschool2"
     }, {
         "label": "Hochschule",
@@ -125,5 +125,6 @@
     }, {
         "label": "Sonstiges",
         "value": "other"
-    }]
+    }],
+
 }
