@@ -130,7 +130,7 @@
         "label": "Sonstiges",
         "value": "other"
     }],
-    "school_topics": [{
+    "school_subjects": [{
         "label": "Arbeit und Beruf",
         "value": ""
     }, {
@@ -148,7 +148,7 @@
     }, {
         "label": "Deutsch als Zweitsprache",
         "value": ""
-    } {
+    },{
         "label": "Englisch",
         "value": ""
     }, {
