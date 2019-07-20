@@ -2,7 +2,7 @@
   "name": "oerhoernchen20-react",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://programmieraffe.github.io/oerhoernchen20-react/"
+  "homepage":"https://programmieraffe.github.io/oerhoernchen20-react/",
   "dependencies": {
     "@appbaseio/reactivesearch": "^3.0.0-rc.21",
     "gh-pages": "^2.0.1",

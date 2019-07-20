@@ -26,3 +26,12 @@ Add in react:
 Github Pages deployment
 https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d
 > npm install --save gh-pages
+
+>The “homepage” specifies the host path where you want to host the application. 
+> The template for the URL is: 
+> https://[your-user-name].github.io/[your-repo-name]/
+> “predeploy” specifies the command to build before deployment.
+> “deploy” specifies which branch and directory to deploy.
+
+Run/Build:
+> npm run deploy
