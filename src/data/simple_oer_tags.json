@@ -100,5 +100,34 @@
     }, {
         "label": "Weiterbildung",
         "value": "furthereducation"
-    }]
+    }],
+    "license_types":[{
+            "label":"CC0",
+            "value":"cc0"
+        },{
+            "label":"CC BY",
+            "value":"ccby"
+        },{
+            "label":"CC BY-SA",
+            "value":"ccbysa"
+        },{
+            "label":"CC BY-SA-NC",
+            "value":"ccbysanc"
+        },{
+            "label":"CC BY-ND",
+            "value":"ccbynd"
+        },{
+            "label":"CC BY-NC",
+            "value":"ccbync"
+        },{
+            "label":"CC BY-ND-NC",
+            "value":"ccbyndnc"
+        },{
+            "label":"Sonstiges",
+            "value":"other"
+        }/*,{
+            "label":"Public Domain Mark",
+            "value":"pdmark"
+        }*/
+        ]
 }
