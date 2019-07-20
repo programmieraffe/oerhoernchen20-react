@@ -1,0 +1,54 @@
+{
+    "general_types": {
+        "audio": "Audio",
+        "video": "Video",
+        "slides": "Präsentationsfolien",
+        "worksheet": "Arbeitsblatt",
+        "interactive": "Interaktiver Inhalt",
+        "quiz": "Übungsaufgaben/Assesment",
+        "coursemodule": "Kurseinheit/Mini-Kurs",
+        "fullcourse": "Umfangreicher Kurs",
+        "textbook": "Textbook/E-Book",
+        "teachingconcept": "Unterricht-/Seminarverlauf"
+    },
+    "technical_formats": {
+        "h5p": "h5p",
+        "microsoftoffice": "Microsoft Office",
+        "openlibreoffice": "Open/Libre Office",
+        "googledocs": "Google Docs",
+        "pdf": "PDF",
+        "appleoffice": "Apple Keynote/Pages",
+        "pressbooks": "Pressbooks",
+        "reveal": "Reveal-Präsentation",
+        "staticsitegenerator": "Static Site Generator",
+        "markdown": "Markdown",
+        "moodle": "Moodle (LMS)",
+        "ilias": "ILIAS (LMS)",
+        "tutory": "Tutory",
+        "slidewiki": "Slidewiki",
+        "opencourseware": "Open Course Ware (OCW)",
+        "scorm": "SCORM"
+    },
+    "educational_sectors": [{
+        "label": "Frühkindliche Erziehung",
+        "value": "earlychildhood"
+    }, {
+        "label": "Grundschulbildung",
+        "value": "primaryschool"
+    }, {
+        "label": "Sekundarstufe 1",
+        "value": "secondaryschool1"
+    }, {
+        "label": "Sekundarstufe 2",
+        "value": "secondaryschool2"
+    }, {
+        "label": "Hochschule",
+        "value": "highereducation"
+    }, {
+        "label": "Berufliche Bildung",
+        "value": "vocationaleducation"
+    }, {
+        "label": "Weiterbildung",
+        "value": "furthereducation"
+    }]
+}
