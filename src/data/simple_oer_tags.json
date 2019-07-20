@@ -4,35 +4,44 @@
         "value":"educationforsustainabledevelopment"
     }],
     "general_types": [{
+        "label": "Arbeitsblatt",
+        "value": "worksheet"
+    },{
         "label": "Audio",
         "value": "audio"
     }, {
-        "label": "Video",
-        "value": "video"
-    }, {
         "label": "Präsentationsfolien",
         "value": "slides"
-    }, {
-        "label": "Arbeitsblatt",
-        "value": "worksheet"
-    }, {
+    },  {
         "label": "Interaktiver Inhalt",
         "value": "interactive"
     }, {
-        "label": "Übungsaufgaben\/Assesment",
-        "value": "quiz"
-    }, {
-        "label": "Kurseinheit\/Mini-Kurs",
+        "label": "Kurs - Einheit",
         "value": "coursemodule"
     }, {
-        "label": "Umfangreicher Kurs",
-        "value": "fullcourse"
-    }, {
+        "label": "Kurs - umfangreich",
+        "value": "coursefull"
+    },{
+        "label": "Podcast",
+        "value": "podcast"
+    },{
+        "label": "Simulation",
+        "value": "simulation"
+    },{
         "label": "Textbook\/E-Book",
         "value": "textbook"
     }, {
         "label": "Unterricht-\/Seminarverlauf",
         "value": "teachingconcept"
+    },{
+        "label": "Übungsaufgaben\/Assesment",
+        "value": "quiz"
+    },{
+        "label": "Video",
+        "value": "video"
+    },{
+        "label":"Sonstiges",
+        "value":"other"
     }],
     "technical_formats": [{
         "label": "h5p",
@@ -82,6 +91,9 @@
     }, {
         "label": "SCORM",
         "value": "scorm"
+    },{
+        "label":"Sonstiges",
+        "value:":"other"
     }],
     "educational_sectors": [{
         "label": "Frühkindliche Erziehung",
@@ -209,5 +221,35 @@
         "label": "Theater",
         "value": ""
     }],
-    "higher_education_topics": []
+    "higher_education_subjects": [{
+        "label":"Agrar-/Forstwissenschaften",
+        "value":"agrar"
+    },{
+        "label":"Gesellschafts- und Sozialwissenschaften",
+        "value":"humanities"
+    },{
+        "label":"Ingenieurwissenschaften",
+        "value":"Engineering"
+    },{
+        "label":"Kunst, Musik, Design",
+        "value":"arts"
+    },{
+        "label":"Lehramt",
+        "value":"teaching"
+    },{
+        "label":"Mathematik, Naturwissenschaften",
+        "value":"mathematicsnature"
+    },{
+        "label":"Medizin, Gesundheitswissenschaften",
+        "value":"medicalstudies"
+    },{
+        "label":"Öffentliche Verwaltung",
+        "value":"publicadministration"
+    },{
+        "label":"Sprach- und Kulturwissenschaften",
+        "value":"culturalstudies"
+    },{
+        "label":"Wirtschaftswissenschaften, Rechtswissenschaften",
+        "value":"economiclaw"
+    }]
 }
