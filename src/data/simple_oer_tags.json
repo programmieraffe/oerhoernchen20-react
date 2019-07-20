@@ -93,7 +93,7 @@
         "value": "scorm"
     },{
         "label":"Sonstiges",
-        "value:":"other"
+        "value":"other"
     }],
     "educational_sectors": [{
         "label": "Frühkindliche Erziehung",
@@ -144,10 +144,7 @@
     }],
     "school_subjects": [{
         "label": "Arbeit und Beruf",
-        "value": ""
-    }, {
-        "label": "Bildende Kunst",
-        "value": ""
+        "value": "career"
     }, {
         "label": "Biologie",
         "value": "biology"
@@ -156,70 +153,70 @@
         "value": ""
     }, {
         "label": "Deutsch",
-        "value": ""
+        "value": "german"
     }, {
         "label": "Deutsch als Zweitsprache",
-        "value": ""
+        "value": "germansecondlanguage"
     },{
         "label": "Englisch",
-        "value": ""
+        "value": "english"
     }, {
         "label": "Französisch",
-        "value": ""
+        "value": "french"
     }, {
         "label": "Geographie",
-        "value": ""
+        "value": "geography"
     }, {
         "label": "Geschichte",
-        "value": ""
+        "value": "history"
     }, {
         "label": "Gesellschaft",
-        "value": ""
+        "value": "society"
     }, {
         "label": "Hauswirtschaft/Ernährung",
-        "value": ""
+        "value": "nutrition"
     }, {
         "label": "Informatik",
-        "value": ""
+        "value": "computerscience"
     }, {
         "label": "Kunst",
-        "value": ""
+        "value": "arts"
     }, {
         "label": "Latein",
-        "value": ""
+        "value": "latin"
     }, {
         "label": "Musik",
-        "value": ""
+        "value": "music"
     }, {
         "label": "Naturwissenschaften/Technik",
-        "value": ""
+        "value": "naturescience"
     }, {
         "label": "Philosophie",
-        "value": ""
+        "value": "philosophy"
     }, {
         "label": "Physik",
-        "value": ""
+        "value": "physics"
     }, {
         "label": "Politik/Gesellschaft/Wirtschaft",
-        "value": ""
+        "value": "policitssocietyeconomy"
     }, {
         "label": "Religion",
-        "value": ""
+        "value": "religion"
     }, {
         "label": "Russisch",
-        "value": ""
+        "value": "russian"
     }, {
         "label": "Sachunterricht",
-        "value": ""
+        "value": "generalstudies"
     }, {
-        "label": "Sprachenunterricht",
-        "value": ""
+        "label": "Sprachen",
+        "value": "language"
     }, {
         "label": "Sport",
-        "value": ""
+        "value": "sports"
     }, {
         "label": "Theater",
-        "value": ""
+        "value": "theatre"
     }],
     "higher_education_subjects": [{
         "label":"Agrar-/Forstwissenschaften",
