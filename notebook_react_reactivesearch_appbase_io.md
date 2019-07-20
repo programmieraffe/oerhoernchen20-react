@@ -12,3 +12,5 @@ npm install @appbaseio/reactivesearch
 # https://codesandbox.io/s/github/appbaseio/reactivesearch/tree/next/packages/web/examples/ResultList?from-embed
 
 # https://github.com/babel/babel-sublime
+
+# See https://medium.appbase.io/how-to-build-a-movie-search-app-with-react-and-elasticsearch-2470f202291c for example of own list of data values
