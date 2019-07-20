@@ -22,6 +22,12 @@ import {
 } from '@appbaseio/reactivesearch';
 import './App.css';
 
+// https://stackoverflow.com/a/39333751
+// 2DO: hot swapping is not possible, change it to dynamic version
+// needs json loader for webpack
+// (does not work by now, because data-prop of multi-list is not updated when values change)
+import simpleOerTags from './data/simple_oer_tags.json';
+
 
 class App extends Component {
 
@@ -32,44 +38,28 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        /*this.state = {
             simpleTagFields: null
-        };
+        };*/
+
+        // This binding is necessary to make `this` work in the callback
+        //this.activateLasers = this.activateLasers.bind(this);
     }
 
     componentWillMount() {
-        this.renderMyData();
+        // does not work right now
+        //this.renderMyData();
     }
+
+    /*activateLasers(){
+        this.setState({
+          educationalSectorsData:[]
+        });
+    }*/
 
     renderMyData() {
 
         // does not work right now :(
-
-        // current workaround
-        this.setState({
-          educationalSectorsData:[{
-                    "label": "Frühkindliche Erziehung",
-                    "value": "earlychildhood"
-                }, {
-                    "label": "Grundschulbildung",
-                    "value": "primaryschool"
-                }, {
-                    "label": "Sekundarstufe 1",
-                    "value": "secondaryschool1"
-                }, {
-                    "label": "Sekundarstufe 2",
-                    "value": "secondaryschool2"
-                }, {
-                    "label": "Hochschule",
-                    "value": "highereducation"
-                }, {
-                    "label": "Berufliche Bildung",
-                    "value": "vocationaleducation"
-                }, {
-                    "label": "Weiterbildung",
-                    "value": "furthereducation"
-                }]
-        });
 
         /*fetch('https://raw.githubusercontent.com/programmieraffe/oerhoernchen-simple-tag-fields/master/data.json')
             .then((response) => response.json())
@@ -91,11 +81,7 @@ class App extends Component {
             .catch((error) => {
                 console.error(error);
             });*/
-
-
     }
-
-    // EO of try to load metadata fields
 
 
     render() {
@@ -104,35 +90,50 @@ class App extends Component {
             <ReactiveBase app = "oerhoernchen20"
             credentials = "uPW3Wdmjv:356ded3b-f6ee-4b62-b189-67a0eae0c1f6" >
 
-        <div>{JSON.stringify(this.state.educationalSectorsData)}</div>
+            {/* <button onClick={this.activateLasers}>
+              Activate Lasers
+            </button> */}
+
+            {/*<div>{JSON.stringify(this.state.educationalSectorsData)}</div>*/}
 
             <div className = "row reverse-labels" >
             <div className = "col" >
-            <SingleDropdownRange componentId = "BookSensor"
-            dataField = "average_rating"
-            title = "SingleDropdownRange"
-            data = {
-                [{
-                    start: 0,
-                    end: 3,
-                    label: 'Rating < 3'
-                }, {
-                    start: 3,
-                    end: 4,
-                    label: 'Rating 3 to 4'
-                }, {
-                    start: 4,
-                    end: 5,
-                    label: 'Rating > 4'
-                }, ]
+            {/* We use DataList for translations */}
+
+            {/* 2DO: show count does not work right now, wrong data field?*/}
+            <MultiDataList 
+            componentId="licenseTypeFilter"
+            dataField = "license_type"
+            className = "license-types-filter"
+            defaultValue={["cc0","ccby","ccbysa"]}
+            title = "Lizenz"
+            data={simpleOerTags.license_types}
+            showSearch = {
+                false
+            }
+            URLParams = {
+                true
             }
             />
 
-            <MultiDataList componentId="educationalSectorsFilter"
+
+
+            <MultiDataList 
+            componentId="educationalSectorsFilter"
             dataField = "educational_sectors"
-            className = "language-filter"
-            title = "language"
-            size = {
+            className = "educational-sectors-filter"
+            title = "Bildungsbereich"
+            data={simpleOerTags.educational_sectors}
+            showSearch = {
+                false
+            }
+            showCount = {
+                true
+            }
+            URLParams = {
+                true
+            }
+            /*size = {
                 100
             }
             sortBy = "asc"
@@ -144,8 +145,8 @@ class App extends Component {
             showSearch = {
                 true
             }
-            placeholder = "Search for a language"
-            react = {
+            placeholder = "Search for a language"*/
+            /*react = {
                 {
                     and: [
                         "mainSearch",
@@ -156,21 +157,9 @@ class App extends Component {
                         "revenue-list"
                     ]
                 }
-            }
-            data={this.state.educationalSectorsData}
-            showFilter = {
-                true
-            }
-            filterLabel = "Language"
-            URLParams = {
-                false
-            }
-            innerClass = {
-                {
-                    label: "list-item",
-                    input: "list-input"
-                }
-            }
+            }*/
+            // 2DO: this does not update
+            //data={this.state.educationalSectorsData}
             />
 
             </div> <div className = "col"
@@ -180,17 +169,16 @@ class App extends Component {
                 }
             } >
 
-            
-            <ReactiveList componentId="SearchResult"
+            <SelectedFilters />
+            <ReactiveList 
+            componentId="SearchResults"
             dataField = "title"
-            size = {
-                3
-            }
-            className = "result-list-container"
-            pagination URLParams
-            // add all filters here
+            className = "search-results-container"
+            pagination 
+            URLParams
+            // add all filters here - IMPORTANT!
             react={{
-                "and": ["educationalSectorsFilter"]
+                "and": ["educationalSectorsFilter","licenseTypeFilter"]
             }}
             render = {
                 ({
@@ -200,42 +188,31 @@ class App extends Component {
                             ResultList key = {
                                 item._id
                             } >
-                            <ResultList.Image src = {item.thumbnail_url}/> <ResultList.Content>
+                            <ResultList.Image src = {item.thumbnail_url}/>
+                            <ResultList.Content>
                             <ResultList.Title>
-                            <div className = "book-title"
+                            <div className = "title"
                             dangerouslySetInnerHTML = {
                                 {
                                     __html: item.title,
                                 }
                             }
-                            /> </ResultList.Title> <ResultList.Description>
+                            /> 
+                            </ResultList.Title> 
+
+                            <ResultList.Description>
+
                             <div className = "flex column justify-space-between">
-                            <div>
-                            <div>
-                            by {
-                                ' '
-                            } <span className = "authors-list">Bildungsbereich: {item.educational_sectors && item.educational_sectors.join(",")} </span> </div> <div className = "ratings-list flex align-center">
-                            <span className = "stars"> {
-                                Array(item.average_rating_rounded)
-                                .fill('x')
-                                .map((
-                                    item, // eslint-disable-line
-                                    index,
-                                ) => ( <
-                                    i className = "fas fa-star"
-                                    key = {
-                                        index
-                                    } // eslint-disable-line
-                                    />
-                                ))
-                            } </span> <span className = "avg-rating" >
-                            ({
-                                    item.average_rating
-                                }
-                                avg) </span> </div> </div> <span className = "pub-year" >
-                            Pub {
-                                item.original_publication_year
-                            } </span> </div> </ResultList.Description> </ResultList.Content > </ResultList>
+                            Lizenz: {item.license_type}<br/>
+                            Bildungsbereich: {item.educational_sectors && item.educational_sectors.join(",")}<br/>
+                            {item.description}
+                            </div>
+
+                             </ResultList.Description>
+                             
+                             </ResultList.Content>
+                             
+                        </ResultList>
                         ))
                     } </ReactiveList.ResultListWrapper>
                 )
