@@ -1,4 +1,8 @@
 {
+    "special_topics":[{
+        "label":"BNE/Klimakrise",
+        "value":"educationforsustainabledevelopment"
+    }],
     "general_types": [{
         "label": "Audio",
         "value": "audio"
@@ -160,7 +164,7 @@
         "label": "Gesellschaft",
         "value": ""
     }, {
-        "label": "Hauswirtschaft/Ernaehrung",
+        "label": "Hauswirtschaft/Ernährung",
         "value": ""
     }, {
         "label": "Informatik",
