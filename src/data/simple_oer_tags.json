@@ -126,5 +126,84 @@
         "label": "Sonstiges",
         "value": "other"
     }],
-
+    "school_topics": [{
+        "label": "Arbeit und Beruf",
+        "value": ""
+    }, {
+        "label": "Bildende Kunst",
+        "value": ""
+    }, {
+        "label": "Biologie",
+        "value": "biology"
+    }, {
+        "label": "Chemie",
+        "value": ""
+    }, {
+        "label": "Deutsch",
+        "value": ""
+    }, {
+        "label": "Deutsch als Zweitsprache",
+        "value": ""
+    } {
+        "label": "Englisch",
+        "value": ""
+    }, {
+        "label": "Französisch",
+        "value": ""
+    }, {
+        "label": "Geographie",
+        "value": ""
+    }, {
+        "label": "Geschichte",
+        "value": ""
+    }, {
+        "label": "Gesellschaft",
+        "value": ""
+    }, {
+        "label": "Hauswirtschaft/Ernaehrung",
+        "value": ""
+    }, {
+        "label": "Informatik",
+        "value": ""
+    }, {
+        "label": "Kunst",
+        "value": ""
+    }, {
+        "label": "Latein",
+        "value": ""
+    }, {
+        "label": "Musik",
+        "value": ""
+    }, {
+        "label": "Naturwissenschaften/Technik",
+        "value": ""
+    }, {
+        "label": "Philosophie",
+        "value": ""
+    }, {
+        "label": "Physik",
+        "value": ""
+    }, {
+        "label": "Politik/Gesellschaft/Wirtschaft",
+        "value": ""
+    }, {
+        "label": "Religion",
+        "value": ""
+    }, {
+        "label": "Russisch",
+        "value": ""
+    }, {
+        "label": "Sachunterricht",
+        "value": ""
+    }, {
+        "label": "Sprachenunterricht",
+        "value": ""
+    }, {
+        "label": "Sport",
+        "value": ""
+    }, {
+        "label": "Theater",
+        "value": ""
+    }],
+    "higher_education_topics": []
 }
