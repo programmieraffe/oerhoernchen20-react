@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/oerhoernchen20-react/static/css/main.d6ae08f7.chunk.css",
-    "main.js": "/oerhoernchen20-react/static/js/main.53bf9aa5.chunk.js",
-    "main.js.map": "/oerhoernchen20-react/static/js/main.53bf9aa5.chunk.js.map",
+    "main.css": "/oerhoernchen20-react/static/css/main.e3cc449e.chunk.css",
+    "main.js": "/oerhoernchen20-react/static/js/main.80131ada.chunk.js",
+    "main.js.map": "/oerhoernchen20-react/static/js/main.80131ada.chunk.js.map",
     "runtime~main.js": "/oerhoernchen20-react/static/js/runtime~main.c7278af3.js",
     "runtime~main.js.map": "/oerhoernchen20-react/static/js/runtime~main.c7278af3.js.map",
-    "static/js/2.1223d7f9.chunk.js": "/oerhoernchen20-react/static/js/2.1223d7f9.chunk.js",
-    "static/js/2.1223d7f9.chunk.js.map": "/oerhoernchen20-react/static/js/2.1223d7f9.chunk.js.map",
+    "static/js/2.5875b0b8.chunk.js": "/oerhoernchen20-react/static/js/2.5875b0b8.chunk.js",
+    "static/js/2.5875b0b8.chunk.js.map": "/oerhoernchen20-react/static/js/2.5875b0b8.chunk.js.map",
     "index.html": "/oerhoernchen20-react/index.html",
-    "precache-manifest.aed24b6921d2d11e1df0acef11403e48.js": "/oerhoernchen20-react/precache-manifest.aed24b6921d2d11e1df0acef11403e48.js",
+    "precache-manifest.3d555b4b13073a38f737ea8de11f6221.js": "/oerhoernchen20-react/precache-manifest.3d555b4b13073a38f737ea8de11f6221.js",
     "service-worker.js": "/oerhoernchen20-react/service-worker.js",
-    "static/css/main.d6ae08f7.chunk.css.map": "/oerhoernchen20-react/static/css/main.d6ae08f7.chunk.css.map"
+    "static/css/main.e3cc449e.chunk.css.map": "/oerhoernchen20-react/static/css/main.e3cc449e.chunk.css.map",
+    "static/media/squirrel-2781394_640_annawadl_pixabay_cc0.jpg": "/oerhoernchen20-react/static/media/squirrel-2781394_640_annawadl_pixabay_cc0.c80911e0.jpg"
   }
 }
