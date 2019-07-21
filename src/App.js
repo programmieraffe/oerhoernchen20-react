@@ -28,6 +28,7 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Col from 'react-bootstrap/Col';
+import Collapse from 'react-bootstrap/Collapse';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
@@ -35,6 +36,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Row from 'react-bootstrap/Row';
+import Card from 'react-bootstrap/Card'
 
 // https://stackoverflow.com/a/39333751
 // 2DO: hot swapping is not possible, change it to dynamic version
@@ -125,15 +127,15 @@ class App extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
-                  <Nav.Link href="#home">Home</Nav.Link>
-                  <Nav.Link href="#link">Link</Nav.Link>
+                  <Nav.Link href="#home">Eintragen</Nav.Link>
+                  {/*<Nav.Link href="#link">Link</Nav.Link>
                   <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                     <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown>*/}
                 </Nav>
                 {/*<Form inline>
                   <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -145,7 +147,7 @@ class App extends Component {
         <Container fluid={true}>
           <Row>
 
-            <Col sm={4} lg={3}>
+            <Col xs={12} sm={12} md={3} lg={3} className="order-md-first order-lg-first">
                  <div className="filters-container">
                     <DataSearch
                       componentId="searchFilter"
@@ -155,9 +157,9 @@ class App extends Component {
                       //defaultValue="Songwriting"
                       fieldWeights={[1, 3]}
                       placeholder="Suche nach Begriff(en)"
-                      autosuggest={true}
+                      autosuggest={false}
+                      highlight={false}
                       //defaultSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
-                      highlight={true}
                       //highlightField="group_city"
                       queryFormat="or"
                       fuzziness={0}
@@ -220,10 +222,10 @@ class App extends Component {
                     componentId="schoolSubjectsFilter"
                     dataField = "school_subjects"
                     className = "filter"
-                    title = "Schulfächer"
+                    title = "Schule: Fächer"
                     data={simpleOerTags.school_subjects}
                     showSearch = {
-                        true
+                        false
                     }
                     URLParams = {
                         true
@@ -235,10 +237,10 @@ class App extends Component {
                     componentId="higherEducationSubjectsFilter"
                     dataField = "higher_education_subjects"
                     className = "filter"
-                    title = "Hochschule:Fachbereiche"
+                    title = "Hochschule: Fachbereiche"
                     data={simpleOerTags.higher_education_subjects}
                     showSearch = {
-                        true
+                        false
                     }
                     URLParams = {
                         true
@@ -281,9 +283,9 @@ class App extends Component {
                 </div>
             </Col>
             
-            <Col sm={4} lg={6}>
+            <Col xs={12} sm={12} md={6} lg={6} className="order-first">
                 <div className="result-list-container">
-                <h3>Suchergebnisse</h3>
+                {/*<h3>Suchergebnisse</h3>*/}
                 <SelectedFilters />
                 <ReactiveList 
                 componentId="SearchResults"
@@ -309,49 +311,56 @@ class App extends Component {
                         data
                     }) => ( <ReactiveList.ResultListWrapper> {
                             data.map(item => ( 
-                                <ResultList key = {
-                                    item._id
-                                } >
-                                <ResultList.Image src={item.thumbnail_url} />
-                                <ResultList.Content>
-                                <ResultList.Title>
+                                
+                            <Card key={item._id}>
+                                        
+                                        <div className="card-body">
+                                            <a href={item.main_url}><img src={item.thumbnail_url} class="thumbnail rounded float-right" alt="..." /></a>
+                                            <a href={item.main_url}><h4 className="card-title">{item.title}</h4></a>
+                                            <p className="card-text">{item.description.substr(0,600)}</p>
+                                        </div>
+                                        {/* <div className="img-square-wrapper">
+                                            <img className="thumbnail" src={item.thumbnail_url} alt="Card image cap"/>
+                                        </div> */}
+                                    <div className="card-footer">
+                                        <small className="text-muted">Lizenz: {item.license_type} | Hinzugefügt am {item.entry_added}</small>
+                                    </div>
+
+
+                                {/* <div className="flex column justify-space-between">
+                                        Lizenz: {item.license_type}<br/>
+                                        Bildungsbereich: {item.educational_sectors && item.educational_sectors.join(",")}<br/>
+                                        Beschreibung: {item.description.substring(0, 200)}<br/>
+                                        Lizenz-Attribution: {item.license_attribution} <br/>
+                                        Spezial-Thema: {item.special_topics && item.special_topics.join(",")}<br/>
+                                        Schule: {item.school_subjects && item.school_subjects.join(",")}<br/>
+                                        Hochschule: {item.higher_education_subjects && item.higher_education_subjects.join(",")}<br/>
+                                        Erstellungsjahr: {item.created_year}<br/>
+                                        Art: {item.general_types && item.general_types.join(",")}<br/>
+                                        Technische Formate: {item.technical_formats && item.technical_formats.join(",")}<br/>
+                                        Hinzugefügt: {item.entry_added}<br/>
+                                        URL: {item.main_url}
+                                        </div> */}
+
+
+                
+                                {/* 2DO: do we need this?
                                 <div className = "title"
                                 dangerouslySetInnerHTML = {
                                     {
                                         __html: item.title,
                                     }
                                 }
-                                /> 
-                                </ResultList.Title> 
+                                /> */}
 
-                                <ResultList.Description>
-
-                                <div className="flex column justify-space-between">
-                                Lizenz: {item.license_type}<br/>
-                                Bildungsbereich: {item.educational_sectors && item.educational_sectors.join(",")}<br/>
-                                Beschreibung: {item.description.substring(0, 200)}<br/>
-                                Lizenz-Attribution: {item.license_attribution} <br/>
-                                Spezial-Thema: {item.special_topics && item.special_topics.join(",")}<br/>
-                                Schule: {item.school_subjects && item.school_subjects.join(",")}<br/>
-                                Hochschule: {item.higher_education_subjects && item.higher_education_subjects.join(",")}<br/>
-                                Erstellungsjahr: {item.created_year}<br/>
-                                Technische Formate: {item.technical_formats && item.technical_formats.join(",")}<br/>
-                                Hinzugefügt: {item.entry_added}
-                                </div>
-
-                                 </ResultList.Description>
-                                 
-                                 </ResultList.Content>
-                                 
-                            </ResultList>
-                            ))
+                                </Card>))
                         } </ReactiveList.ResultListWrapper>
                     )
                 }/>{/*eo reactiveList*/}
             </div>
             </Col>
 
-            <Col sm={4} lg={3}>
+            <Col xs={12} sm={12} md={3} lg={3}>
                  <div className="filters-container">
                     <MultiDataList 
                     componentId="generalTypesFilter"
@@ -390,78 +399,11 @@ class App extends Component {
             
           </Row>
           <Row>
-            <Col sm>sm=true</Col>
-            <Col sm>sm=true</Col>
-            <Col sm>sm=true</Col>
+            <Col sm>Footer</Col>
           </Row>
         </Container>
-
-
         {/* eo new react-bootstrap layout */}
-
-
-            <div className = "row reverse-labels" >
-            <div className = "col" >
-            {/* We use DataList for translations */}
-
-            {/* 2DO: show count does not work right now, wrong data field?*/}
-            
-
-            <MultiDataList 
-            componentId="educationalSectorsFilter"
-            dataField = "educational_sectors"
-            className = "filter"
-            title = "Bildungsbereich"
-            data={simpleOerTags.educational_sectors}
-            showSearch = {
-                false
-            }
-            showCount = {
-                true
-            }
-            URLParams = {
-                true
-            }
-            /*size = {
-                100
-            }
-            sortBy = "asc"
-            queryFormat = "or"
-            selectAllLabel = "All Languages"
-            showCheckbox = {
-                true
-            }
-            showSearch = {
-                true
-            }
-            placeholder = "Search for a language"*/
-            /*react = {
-                {
-                    and: [
-                        "mainSearch",
-                        "results",
-                        "date-filter",
-                        "RangeSlider",
-                        "genres-list",
-                        "revenue-list"
-                    ]
-                }
-            }*/
-            // 2DO: this does not update
-            //data={this.state.educationalSectorsData}
-            />
-
-            
-
-            </div>
-            <div className = "col"
-            style = {
-                {
-                    backgroundColor: '#fafafa'
-                }
-            } >
-
-             </div> </div> </ReactiveBase>
+         </ReactiveBase>
         );
     }
 }

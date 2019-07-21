@@ -24,6 +24,39 @@ a.navbar-brand{
     border-color: #C4E538;
 }
 
+/* https://codepen.io/SteveJRobertson/pen/POdvgz */
+
+/* 2do: use container */
+
+.result-list-container .card{
+	margin-bottom:15px;
+}
+
+.result-list-container .card h4{
+	font-size:16px;
+}
+
+.result-list-container .card-text{
+	font-size:10px;
+}
+
+.result-list-container a:visited,.result-list-container a{
+	color:#333;
+}
+
+/*.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}*/
+
+.thumbnail{
+	width:150px;
+	margin-left:10px;
+	margin-bottom: 10px;
+}
+
+
+
 /* from booksearch example */
 /* https://codesandbox.io/s/9167mmkqlo?source=post_page--------------------------- */
 
