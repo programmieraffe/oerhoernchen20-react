@@ -128,6 +128,8 @@ class App extends Component {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                   <Nav.Link href="#home">Eintragen</Nav.Link>
+                  <Nav.Link href="#home">Über</Nav.Link>
+                  <Nav.Link href="#home">Impressum/Datenschutz</Nav.Link>
                   {/*<Nav.Link href="#link">Link</Nav.Link>
                   <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                     <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
@@ -399,7 +401,7 @@ class App extends Component {
             
           </Row>
           <Row>
-            <Col sm>Footer</Col>
+            <Col lg={12}>Footer</Col>
           </Row>
         </Container>
         {/* eo new react-bootstrap layout */}
