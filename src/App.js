@@ -105,7 +105,7 @@ class App extends Component {
             componentId="licenseTypeFilter"
             dataField = "license_type"
             className = "license-types-filter"
-            defaultValue={["cc0","ccby","ccbysa"]}
+            defaultValue={["CC0","CC BY","CC BY-SA"]}
             title = "Lizenz"
             data={simpleOerTags.license_types}
             showSearch = {
@@ -115,8 +115,6 @@ class App extends Component {
                 true
             }
             />
-
-
 
             <MultiDataList 
             componentId="educationalSectorsFilter"
@@ -162,7 +160,37 @@ class App extends Component {
             //data={this.state.educationalSectorsData}
             />
 
-            </div> <div className = "col"
+            <MultiDataList 
+            componentId="technicalFormatsFilter"
+            dataField = "technical_formats"
+            className = "technical-formats-filter"
+            title = "Technische Formate"
+            data={simpleOerTags.technical_formats}
+            showSearch = {
+                false
+            }
+            URLParams = {
+                true
+            }
+            />
+
+            <MultiDataList 
+            componentId="schoolSubjectsFilter"
+            dataField = "schoolSubjectsFilter"
+            className = "school-subjects-filter"
+            title = "Schulfächer"
+            data={simpleOerTags.school_subjects}
+            showSearch = {
+                true
+            }
+            URLParams = {
+                true
+            }
+            size={3}
+            />
+
+            </div>
+            <div className = "col"
             style = {
                 {
                     backgroundColor: '#fafafa'
@@ -205,7 +233,11 @@ class App extends Component {
                             <div className = "flex column justify-space-between">
                             Lizenz: {item.license_type}<br/>
                             Bildungsbereich: {item.educational_sectors && item.educational_sectors.join(",")}<br/>
-                            {item.description}
+                            {item.description} <br/>
+                            Lizenz-Attribution: {item.license_attribution} <br/>
+                            Spezial-Thema: {item.special_topics && item.special_topics.join(",")}<br/>
+                            Schule: {item.school_subjects && item.school_subjects.join(",")}<br/>
+                            Hochschule: {item.higher_education_subjects && item.higher_education_subjects.join(",")}<br/>
                             </div>
 
                              </ResultList.Description>

@@ -1,6 +1,6 @@
 https://medium.appbase.io/how-to-build-a-movie-search-app-with-react-and-elasticsearch-2470f202291c
 
-> Matthiass-Air:webserver admin$ npx create-react-app oerhoernchen20-react
+> npx create-react-app oerhoernchen20-react
 
 > cd oerhoernchen20-react
 > npm start
@@ -35,3 +35,9 @@ https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-4
 
 Run/Build:
 > npm run deploy
+
+# Bootstrap-react
+
+https://react-bootstrap.netlify.com/getting-started/introduction
+
+> npm install react-bootstrap bootstrap
