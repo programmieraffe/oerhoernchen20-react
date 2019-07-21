@@ -317,7 +317,11 @@ class App extends Component {
                             <Card key={item._id}>
                                         
                                         <div className="card-body">
-                                            <a href={item.main_url}><img src={item.thumbnail_url} class="thumbnail rounded float-right" alt="..." /></a>
+
+                                            { typeof item.thumbnail_url !== 'undefined' && item.thumbnail_url != '' &&
+                                                <a href={item.main_url}><img src={item.thumbnail_url} class="thumbnail rounded float-right" alt="..." /></a>
+                                            }
+                                                
                                             <a href={item.main_url}><h4 className="card-title">{item.title}</h4></a>
                                             <p className="card-text">{item.description.substr(0,600)}</p>
                                         </div>

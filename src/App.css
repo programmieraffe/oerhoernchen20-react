@@ -30,6 +30,12 @@ a.navbar-brand{
 
 .result-list-container .card{
 	margin-bottom:15px;
+  box-shadow: 0 0 2px rgba(24, 28, 43, 0.2);
+  /*border:none;*/
+}
+.result-list-container .card .card-footer{
+  /*border:none;
+  background:none;*/
 }
 
 .result-list-container .card h4{
