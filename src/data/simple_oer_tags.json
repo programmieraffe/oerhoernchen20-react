@@ -136,8 +136,8 @@
         "label": "CC BY-NC",
         "value": "ccbync"
     }, {
-        "label": "CC BY-ND-NC",
-        "value": "ccbyndnc"
+        "label": "CC BY-NC-ND",
+        "value": "ccbyncnd"
     }, {
         "label": "Sonstiges",
         "value": "other"

@@ -18,6 +18,8 @@
       crossorigin="anonymous"
     />
 
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -28,10 +30,25 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>OERhörnchen 2.0 (Alpha)</title>
-    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">OERtags</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link" href="#">Eintragen</a>
+          <a class="nav-item nav-link" href="#">Über</a>
+          <a class="nav-item nav-link disabled" href="#">Impressum/Datenschutz</a>
+        </div>
+      </div>
+    </nav>
+
     <div id="root"></div>
     <!--
       This HTML file is a template.
