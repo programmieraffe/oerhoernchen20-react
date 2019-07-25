@@ -279,7 +279,8 @@ class App extends Component {
                     "speciaTopicsFilter",
                     "searchFilter",
                     "entryAddedFilter",
-                    "generalTypesFilter"]
+                    "generalTypesFilter",
+                    "technicalFormatsFilter"]
                 }}
                 render = {
                     ({

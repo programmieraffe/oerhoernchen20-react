@@ -16,10 +16,10 @@
         "label": "Interaktiver Inhalt",
         "value": "interactive"
     }, {
-        "label": "Kurs - Einheit",
+        "label": "Kurs - Einheit/Modul",
         "value": "coursemodule"
     }, {
-        "label": "Kurs - umfangreich",
+        "label": "Kurs - mehrwöchig",
         "value": "coursefull"
     },{
         "label": "Podcast",
@@ -138,8 +138,13 @@
     }, {
         "label": "CC BY-NC-ND",
         "value": "ccbyncnd"
-    }, {
-        "label": "Sonstiges",
+    }, 
+    {
+        "label": "Ohne freie Lizenz :(",
+        "value": "regularcopyright"
+    },
+    {
+        "label": "Sonstige Lizenzen",
         "value": "other"
     }],
     "school_subjects": [{
