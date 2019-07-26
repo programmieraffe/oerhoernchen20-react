@@ -24,8 +24,6 @@ import {
     DateRange
 } from '@appbaseio/reactivesearch';
 
-import './bootstrap.minty.bootswatch.min.css';
-
 import './App.css';
 
 import Button from 'react-bootstrap/Button';
