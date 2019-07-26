@@ -47,8 +47,6 @@ import Card from 'react-bootstrap/Card'
 // (does not work by now, because data-prop of multi-list is not updated when values change)
 import simpleOerTags from './data/simple_oer_tags.json';
 
-import logo from './images/squirrel-2781394_640_annawadl_pixabay_cc0.jpg';
-
 
 class App extends Component {
 
@@ -374,9 +372,6 @@ class App extends Component {
 
                  </div>
             </Col>
-
-
-            
           </Row>
           <Row>
             <Col lg={12}>Footer</Col>

@@ -1,3 +1,16 @@
+
+# Start
+
+> npm run
+
+# Build
+
+> npm run build
+
+
+
+
+
 https://medium.appbase.io/how-to-build-a-movie-search-app-with-react-and-elasticsearch-2470f202291c
 
 > npx create-react-app oerhoernchen20-react
@@ -41,3 +54,39 @@ Run/Build:
 https://react-bootstrap.netlify.com/getting-started/introduction
 
 > npm install react-bootstrap bootstrap
+
+#Webpack, to set public path
+
+> npm install --save-dev webpack
+
+change package.json
+
+> "scripts": {
+>   "start": "react-scripts start",
+>  "build": "webpack",
+
+> npm run build
+
+Install webpack-cli 
+
+# Webpack React starter
+
+https://github.com/bradtraversy/react_webpack_starter
+
+Required: 
+
+> npm install --save-dev clean-webpack-plugin
+
+Change webpackconfig because of bugs
+
+Install babel, because loader cant be found when build
+
+> npm install --save-dev @babel/core @babel/preset-env
+
+> npm install --save-dev babel-loader
+
+> npm install --save-dev css-loader
+
+>npm install --save-dev @babel/preset-react
+
+> npm install --save-dev file-loader
