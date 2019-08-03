@@ -123,7 +123,7 @@ class App extends Component {
                     <DataSearch
                       componentId="searchFilter"
                       className="filter"
-                      dataField={["title","description"]}
+                      dataField={["title","description","_id"]}
                       //title="Search"
                       //defaultValue="Songwriting"
                       fieldWeights={[1, 3]}
@@ -132,7 +132,7 @@ class App extends Component {
                       highlight={false}
                       //defaultSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
                       //highlightField="group_city"
-                      queryFormat="or"
+                      queryFormat="and"
                       fuzziness={0}
                       debounce={100}
                       /*react={{
@@ -140,7 +140,7 @@ class App extends Component {
                       }}*/
                       showFilter={true}
                       filterLabel="Begriffsuche"
-                      URLParams={false}
+                      URLParams={true}
                     />
 
                     <MultiDataList 
@@ -175,7 +175,7 @@ class App extends Component {
 
                     <MultiDataList 
                     componentId="educationalSectorsFilter"
-                    dataField = "educational_sectors"
+                    dataField = "educational_sectors.keyword"
                     className = "filter"
                     title = "Bildungsbereich"
                     data={simpleOerTags.educational_sectors}
@@ -183,12 +183,12 @@ class App extends Component {
                         false
                     }
                     showCount = {
-                        true
+                        false
                     }
                     URLParams = {
                         true
                     } />
-
+                {/* use .keyword or not?!*/}
                     <MultiDataList 
                     componentId="schoolSubjectsFilter"
                     dataField = "school_subjects"
@@ -202,6 +202,9 @@ class App extends Component {
                         true
                     }
                     size={3}
+                    showCount = {
+                        false
+                    }
                     />
 
                     <MultiDataList 
@@ -217,6 +220,7 @@ class App extends Component {
                         true
                     }
                     size={3}
+                    showCount={false}
                     />
 
                     {/*<RangeInput
@@ -251,6 +255,14 @@ class App extends Component {
                       queryFormat="basic_date_time"
                     />
 
+                    <MultiList 
+                    componentId="tagsFilter"
+                    dataField="tags.keyword"
+                    className="filter"
+                    title="Tags"
+                    />
+
+
                 </div>
             </Col>
             
@@ -265,6 +277,18 @@ class App extends Component {
                 pagination 
                 URLParams
                 sortBy="desc"
+                /*sortOptions={[
+                    {
+                      label: "Best Match",
+                      dataField: "_score",
+                      sortBy: "desc"
+                    },
+                    {
+                      label: "Asc",
+                      dataField: "my_field",
+                      sortBy: "asc"
+                    }
+                ]}*/
                 // add all filters here - IMPORTANT!
                 react={{
                     "and": [
@@ -276,7 +300,8 @@ class App extends Component {
                     "searchFilter",
                     "entryAddedFilter",
                     "generalTypesFilter",
-                    "technicalFormatsFilter"]
+                    "technicalFormatsFilter",
+                    "tagsFilter"]
                 }}
                 render = {
                     ({
@@ -289,11 +314,20 @@ class App extends Component {
                                         <div className="card-body">
 
                                             { typeof item.thumbnail_url !== 'undefined' && item.thumbnail_url != '' &&
-                                                <a href={item.main_url}><img src={item.thumbnail_url} class="thumbnail rounded float-right" alt="..." /></a>
+                                                <a href={item.main_url}><img src={item.thumbnail_url} className="thumbnail rounded float-right" alt="..." /></a>
                                             }
                                                 
                                             <a href={item.main_url}><h4 className="card-title">{item.title}</h4></a>
                                             <p className="card-text">{item.description.substr(0,600)}</p>
+
+                                            <div className="hiddenDetails">
+                                                General types: {item.general_types}<br/>
+                                                Technical formats: {item.technical_formats}<br/>
+                                                Educational sectors: {item.educational_sectors}<br/>
+                                                HigherEd subjects: {item.higher_education_subjects}<br/>
+                                                School subjects {item.school_subjects}.<br/>
+                                                Tags: {item.tags}<br/>
+                                            </div>
                                         </div>
                                         {/* <div className="img-square-wrapper">
                                             <img className="thumbnail" src={item.thumbnail_url} alt="Card image cap"/>

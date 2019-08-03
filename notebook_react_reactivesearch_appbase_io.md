@@ -1,14 +1,15 @@
 
 # Start
 
-> npm run
+> npm start
 
-# Build
+# Build (now via webpack)
 
 > npm run build
 
+Afterwards: Copy oerhoerchen.community_bookmarks.js to codeigniter website
 
-
+-- 
 
 
 https://medium.appbase.io/how-to-build-a-movie-search-app-with-react-and-elasticsearch-2470f202291c
