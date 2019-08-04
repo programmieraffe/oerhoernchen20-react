@@ -1,12 +1,14 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname + '/build',
     /*publicPath: '/',*/
-    filename: 'oerhoernchen.community_bookmarks.js'
+    filename: 'oerhoernchen.community_bookmarks.react.js'
   },
   devServer: {
     contentBase: './',
@@ -33,7 +35,11 @@ module.exports = {
       }
     ]
   },
-  plugins:[new CleanWebpackPlugin()]
+  plugins:[new CleanWebpackPlugin(),
+    new CopyPlugin([
+      { from: 'public/index.html', to: 'index.html' },
+    ])
+  ]
   /*,
    plugins: [
         new HtmlWebpackPlugin({
@@ -42,3 +48,7 @@ module.exports = {
         })
    ]*/
 };
+
+
+
+

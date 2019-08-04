@@ -45,6 +45,9 @@ import Card from 'react-bootstrap/Card'
 // (does not work by now, because data-prop of multi-list is not updated when values change)
 import simpleOerTags from './data/simple_oer_tags.json';
 
+// https://facebook.github.io/create-react-app/docs/using-global-variables
+const OERHOERNCHEN_APPBASE_CREDENTIALS = window.OERHOERNCHEN_APPBASE_CREDENTIALS;
+const OERHOERNCHEN_APPBASE_APP_NAME = window.OERHOERNCHEN_APPBASE_APP_NAME;
 
 class App extends Component {
 
@@ -104,8 +107,8 @@ class App extends Component {
     render() {
         return (
 
-            <ReactiveBase app = "oerhoernchen20"
-            credentials = "uPW3Wdmjv:356ded3b-f6ee-4b62-b189-67a0eae0c1f6" >
+            <ReactiveBase app={OERHOERNCHEN_APPBASE_APP_NAME}
+            credentials={OERHOERNCHEN_APPBASE_CREDENTIALS}>
 
             {/* <button onClick={this.activateLasers}>
               Activate Lasers
@@ -123,7 +126,7 @@ class App extends Component {
                     <DataSearch
                       componentId="searchFilter"
                       className="filter"
-                      dataField={["title","description","_id"]}
+                      dataField={["title","description","oerhoernchen_id"]}
                       //title="Search"
                       //defaultValue="Songwriting"
                       fieldWeights={[1, 3]}
@@ -162,7 +165,7 @@ class App extends Component {
                     componentId="licenseTypeFilter"
                     dataField = "license_type"
                     className = "filter"
-                    defaultValue={["CC0","CC BY","CC BY-SA"]}
+                    //defaultValue={["CC0","CC BY","CC BY-SA"]}
                     title = "Lizenz"
                     data={simpleOerTags.license_types}
                     showSearch = {
@@ -311,7 +314,7 @@ class App extends Component {
                                 
                             <Card key={item._id}>
                                         
-                                        <div className="card-body">
+                                        <div className="card-body" id={'entry-'+item._id}>
 
                                             { typeof item.thumbnail_url !== 'undefined' && item.thumbnail_url != '' &&
                                                 <a href={item.main_url}><img src={item.thumbnail_url} className="thumbnail rounded float-right" alt="..." /></a>
@@ -327,13 +330,17 @@ class App extends Component {
                                                 HigherEd subjects: {item.higher_education_subjects}<br/>
                                                 School subjects {item.school_subjects}.<br/>
                                                 Tags: {item.tags}<br/>
+                                                OERhörnchen-ID: {item.oerhoernchen_id}<br/>
+                                                Elastic-ID: {item._id}
                                             </div>
                                         </div>
                                         {/* <div className="img-square-wrapper">
                                             <img className="thumbnail" src={item.thumbnail_url} alt="Card image cap"/>
                                         </div> */}
                                     <div className="card-footer">
-                                        <small className="text-muted">Lizenz: {item.license_type} | Hinzugefügt am {item.entry_added}</small>
+                                        <small className="text-muted">Lizenz: {item.license_type} | Hinzugefügt am {item.entry_added} | <a className="tulluGenerator" href={'https://beta.oerhoernchen.de/tullu_generator/?id='+item._id}>
+                                                Lizenzhinweis erstellen</a> |  <a className="flagContent" href={'https://beta.oerhoernchen.de/flag/?id='+item._id}>
+                                                Melden</a></small>
                                     </div>
 
 

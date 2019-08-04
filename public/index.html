@@ -20,6 +20,14 @@
 
      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet" />
 
+     <script type="text/javascript">
+      // Set credentials for dev (read)
+      var OERHOERNCHEN_APPBASE_APP_NAME = 'oerhoernchen20-github';
+      var OERHOERNCHEN_APPBASE_CREDENTIALS = 'YXMNSw16y:0e91190e-feb6-499c-94db-5cd32aaa84be';
+     </script>
+
+
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -29,24 +37,22 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>OERhörnchen 2.0 (Alpha)</title>
+    <title>OERhörnchen 2.0 (Dev)</title>
     
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <a class="navbar-brand" href="/">OERhörnchen Link-Datenbank</a>
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class="navbar-brand" href="/">OERhörnchen Community-Lesezeichen (Prototyp)</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="#">Eintragen</a>
-          <a class="nav-item nav-link" href="#">Über</a>
-          <a class="nav-item nav-link" href="#">Impressum/Datenschutz</a>
+          <a class="nav-item nav-link" href="https://blog.matthias-andrasch.de/impressum-datenschutz/">Impressum/Datenschutz</a>
         </div>
-      </div>
+      </div> 
     </nav>
 
     <div id="root"></div>
@@ -60,5 +66,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+
+     <!-- quick hack for gh-pages deployment, use webpack html template later -->
+     <!-- whaaat https://github.com/storybookjs/storybook/issues/2615#issuecomment-405088812 -->
+     <script type="text/javascript" src="oerhoernchen.community_bookmarks.react.js"></script>
+
+     
   </body>
 </html>

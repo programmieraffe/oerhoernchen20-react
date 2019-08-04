@@ -9,6 +9,10 @@
 
 Afterwards: Copy oerhoerchen.community_bookmarks.js to codeigniter website
 
+# Publish to github pages
+
+> npm run deploy
+
 -- 
 
 
