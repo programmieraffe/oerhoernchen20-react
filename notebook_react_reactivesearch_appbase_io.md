@@ -95,3 +95,7 @@ Install babel, because loader cant be found when build
 >npm install --save-dev @babel/preset-react
 
 > npm install --save-dev file-loader
+
+# Webpack copy file
+
+> npm install copy-webpack-plugin --save-dev
